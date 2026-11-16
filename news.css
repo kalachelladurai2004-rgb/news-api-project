@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+/* Search Container */
+.search-container {
+    text-align: center;
+    margin: 30px;
+}
+
+.search-container input {
+    width: 300px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 12px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Categories */
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.categories button {
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #2563eb;
+    color: #2563eb;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* News Container */
+#newsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    align-items: stretch;
+}
+.news-card{
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: hidden;
+
+}
+.news-card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+/* News Title */
+.news-card h2 {
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 12px 0;
+    min-height: 50px;
+}
+
+/* News Description */
+.news-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin: 0 0 15px;
+    flex-grow: 1;
+}
+
+/* Read More Link */
+.news-card a {
+    text-decoration: none;
+    margin-top: auto;
+}
+
+/* Read More Button */
+.news-card a button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.news-card a button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    #newsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    #newsContainer {
+        grid-template-columns: 1fr;
+    }
+}
+.error-message{
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    color: red;
+}
+.error-message h2{
+    margin-bottom: 10px;
+}
+.error-message p{
+    color: black;
+}
